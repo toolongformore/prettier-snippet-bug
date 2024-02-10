@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+{#snippet test(parameter)}
+  {parameter}
+{/snippet}
+
+{@render test("a")}
+<!-- Execute `npm run format` to watch the following line get mangled -->
+{@render test((()=>"a")())}
